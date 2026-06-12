@@ -76,12 +76,12 @@ export function VisitUs() {
     <section
       ref={sectionRef}
       id="visit"
-      className="relative overflow-hidden"
+      className="relative flex min-h-[85vh] flex-col justify-end overflow-hidden"
     >
       {/* Full-bleed image with overlay */}
       <div
         ref={imageRef}
-        className="relative h-[70vh] w-full overflow-hidden md:h-[85vh]"
+        className="absolute inset-0 z-0"
         style={{ willChange: 'transform, opacity' }}
       >
         <Image
@@ -98,8 +98,8 @@ export function VisitUs() {
         <div className="grain-overlay" />
       </div>
 
-      {/* Floating content card — overlaps image bottom */}
-      <div className="absolute inset-x-0 bottom-0 z-10">
+      {/* Floating content card — natural document flow over the image */}
+      <div className="relative z-10 w-full pt-[45vh] md:pt-[30vh]">
         <div className="mx-auto max-w-7xl px-6 pb-16 md:px-10 md:pb-20">
           <div
             ref={contentRef}
@@ -111,7 +111,7 @@ export function VisitUs() {
               <p className="visit-item text-xs uppercase tracking-[0.5em] text-[color:var(--gold)]" style={{ opacity: 0 }}>
                 Find Us
               </p>
-              <h2 className="visit-item mt-3 font-serif text-4xl italic leading-tight text-foreground md:text-5xl lg:text-6xl" style={{ opacity: 0 }}>
+              <h2 className="visit-item mt-3 font-serif text-4xl italic leading-tight text-foreground sm:text-5xl lg:text-6xl" style={{ opacity: 0 }}>
                 Come as you are.<br />
                 <em>Leave transformed.</em>
               </h2>

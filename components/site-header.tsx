@@ -33,7 +33,7 @@ export function SiteHeader() {
     <>
       <header
         ref={headerRef}
-        className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+        className={`fixed inset-x-0 top-0 z-[60] transition-all duration-500 ${
           scrolled
             ? 'bg-background/80 backdrop-blur-md border-b border-border/50 shadow-lg shadow-black/20'
             : ''
