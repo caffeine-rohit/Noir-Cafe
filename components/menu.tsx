@@ -13,7 +13,7 @@ const categories = ['All', 'Coffee', 'Cold Brew', 'Food']
 
 const cards = [
   {
-    src: '/images/menu-1.jpeg',
+    src: '/images/menu-1.jpg',
     name: 'Pour Over',
     desc: 'Single-origin Kenyan beans, brewed by hand to reveal bright, floral notes. The purist\'s choice.',
     price: 'KSh 450',
@@ -34,7 +34,7 @@ const cards = [
     category: 'Cold Brew',
   },
   {
-    src: '/images/menu-1.jpeg',
+    src: '/images/menu-1.jpg',
     name: 'Espresso Noir',
     desc: 'A single concentrated shot — intense, syrupy, with a hazelnut-dark chocolate finish.',
     price: 'KSh 350',
