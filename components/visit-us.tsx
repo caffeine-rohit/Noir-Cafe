@@ -12,6 +12,7 @@ if (typeof window !== 'undefined') {
 export function VisitUs() {
   const sectionRef = useRef<HTMLElement>(null)
   const imageRef   = useRef<HTMLDivElement>(null)
+  const imageInnerRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -54,9 +55,9 @@ export function VisitUs() {
           }
         )
 
-        // Subtle parallax on the image
-        gsap.to(imageRef.current, {
-          y: -60,
+        // Subtle parallax on the inner image (prevents transform conflict with the scale animation)
+        gsap.to(imageInnerRef.current, {
+          y: -80,
           ease: 'none',
           force3D: true,
           scrollTrigger: {
@@ -81,21 +82,27 @@ export function VisitUs() {
       {/* Full-bleed image with overlay */}
       <div
         ref={imageRef}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 overflow-hidden"
         style={{ willChange: 'transform, opacity' }}
       >
-        <Image
-          src="/images/Cafe-exterior.jpeg"
-          alt="Noir Coffee exterior — a premium cafe facade in Westlands, Nairobi"
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-          priority
-        />
+        <div 
+          ref={imageInnerRef}
+          className="absolute inset-0 -top-[10%] h-[120%] w-full"
+          style={{ willChange: 'transform' }}
+        >
+          <Image
+            src="/images/Cafe-exterior.jpeg"
+            alt="Noir Coffee exterior — a premium cafe facade in Westlands, Nairobi"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+            priority
+          />
+        </div>
         {/* Multi-layer gradient for depth — dark on bottom, lighter in middle */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-transparent" />
-        <div className="grain-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-transparent pointer-events-none" />
+        <div className="grain-overlay pointer-events-none" />
       </div>
 
       {/* Floating content card — natural document flow over the image */}
