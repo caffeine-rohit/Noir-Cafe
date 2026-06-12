@@ -13,42 +13,42 @@ const categories = ['All', 'Coffee', 'Cold Brew', 'Food']
 
 const cards = [
   {
-    src: '/images/menu-1.jpg',
+    src: '/images/menu-1.jpeg',
     name: 'Pour Over',
     desc: 'Single-origin Kenyan beans, brewed by hand to reveal bright, floral notes. The purist\'s choice.',
     price: 'KSh 450',
     category: 'Coffee',
   },
   {
-    src: '/images/menu-2.png',
+    src: '/images/menu-2.jpeg',
     name: 'Flat White & Pastry',
     desc: 'A velvet double ristretto with steamed milk, paired with a daily house-made pastry.',
     price: 'KSh 650',
     category: 'Food',
   },
   {
-    src: '/images/menu-3.png',
+    src: '/images/menu-3.jpeg',
     name: 'Cold Brew Noir',
     desc: 'Steeped for eighteen hours over ice — deep, smooth, and quietly intense.',
     price: 'KSh 550',
     category: 'Cold Brew',
   },
   {
-    src: '/images/menu-1.png',
+    src: '/images/menu-1.jpeg',
     name: 'Espresso Noir',
     desc: 'A single concentrated shot — intense, syrupy, with a hazelnut-dark chocolate finish.',
     price: 'KSh 350',
     category: 'Coffee',
   },
   {
-    src: '/images/menu-2.png',
+    src: '/images/menu-2.jpeg',
     name: 'Matcha Ceremony',
     desc: 'Ceremonial-grade matcha whisked with oat milk. Calm in a cup. Served with intention.',
     price: 'KSh 600',
     category: 'Coffee',
   },
   {
-    src: '/images/menu-3.png',
+    src: '/images/menu-3.jpeg',
     name: 'Signature Toast',
     desc: 'Toasted sourdough, whipped ricotta, fig preserve, and house honey — a morning ritual.',
     price: 'KSh 480',
